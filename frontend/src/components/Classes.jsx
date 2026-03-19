@@ -12,7 +12,7 @@ const Classes = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <section id="classes" className="py-20 md:py-32 bg-white">
+    <section id="classes" className="py-24 md:py-32 bg-gradient-to-b from-[#F5E6D3]/20 to-white">
       <div className="container mx-auto px-4">
         <div 
           ref={ref}
@@ -22,35 +22,34 @@ const Classes = () => {
         >
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#4A7C59] mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold text-[#4A7C59] mb-4">
               Clases de Equitación
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#C19A6B] to-[#4A7C59] mx-auto"></div>
+            <div className="w-20 h-1 bg-[#C19A6B] mx-auto"></div>
           </div>
 
-          {/* Classes Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {/* Classes Grid - Simplificado */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
             {mockData.classes.map((classItem, index) => (
               <div
                 key={classItem.id}
-                className={`group bg-gradient-to-br from-white to-[#F5E6D3]/30 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 ${
+                className={`bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 ${
                   inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <h3 className="text-lg font-bold text-[#4A7C59] mb-3">
+                <h3 className="text-xl font-bold text-[#4A7C59] mb-3 text-center">
                   {classItem.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm text-center leading-relaxed">
                   {classItem.description}
                 </p>
-                <div className="mt-4 w-full h-1 bg-gradient-to-r from-[#4A7C59] to-transparent group-hover:from-[#C19A6B] transition-all duration-300"></div>
               </div>
             ))}
           </div>
 
-          {/* Classes Gallery */}
-          <div className="mt-16">
+          {/* Galería de Clases */}
+          <div>
             <h3 className="text-3xl font-bold text-[#4A7C59] mb-8 text-center">
               Galería de Clases
             </h3>
@@ -66,7 +65,7 @@ const Classes = () => {
                     alt={`Clase ${index + 1}`}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300"></div>
                 </div>
               ))}
             </div>
@@ -77,7 +76,7 @@ const Classes = () => {
       {/* Lightbox Modal */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 animate-in fade-in duration-300"
+          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
           <button
