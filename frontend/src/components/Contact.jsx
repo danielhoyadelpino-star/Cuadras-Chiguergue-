@@ -6,6 +6,7 @@ import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react';
 import { toast } from 'sonner';
+import { mockData } from '../data/mock';
 
 const Contact = () => {
   const { ref, inView } = useInView({

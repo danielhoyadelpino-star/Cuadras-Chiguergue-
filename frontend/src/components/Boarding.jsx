@@ -1,6 +1,6 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import { Heart, Shield, Home, Utensils } from 'lucide-react';
+import { Heart, Shield, Home, Utensils, Phone } from 'lucide-react';
 
 const Boarding = () => {
   const { ref, inView } = useInView({

@@ -123,11 +123,6 @@ export const mockData = {
       id: 4,
       title: "Nivel Medio-Avanzado",
       description: "Perfecciona tu técnica y aprende disciplinas avanzadas"
-    },
-    {
-      id: 5,
-      title: "Clases Personalizadas",
-      description: "Adaptadas a tus necesidades y objetivos específicos"
     }
   ],
 

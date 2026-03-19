@@ -29,7 +29,7 @@ const Classes = () => {
           </div>
 
           {/* Classes Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {mockData.classes.map((classItem, index) => (
               <div
                 key={classItem.id}
