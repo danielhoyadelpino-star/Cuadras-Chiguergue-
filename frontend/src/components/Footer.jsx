@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Heart } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,8 +22,8 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3 group cursor-pointer">
                 <Phone size={18} className="transition-transform duration-300 group-hover:scale-110" />
-                <a href="tel:683532121" className="text-sm hover:text-[#F5E6D3] transition-colors duration-300">
-                  683 53 21 21
+                <a href="tel:683532143" className="text-sm hover:text-[#F5E6D3] transition-colors duration-300">
+                  683 53 21 43
                 </a>
               </div>
               <div className="flex items-center gap-3 group cursor-pointer">
@@ -34,8 +34,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 group cursor-pointer">
                 <Mail size={18} className="transition-transform duration-300 group-hover:scale-110" />
-                <a href="mailto:info@cuadraschiguergue.com" className="text-sm hover:text-[#F5E6D3] transition-colors duration-300">
-                  info@cuadraschiguergue.com
+                <a href="mailto:cuadraschiguergue@gmail.com" className="text-sm hover:text-[#F5E6D3] transition-colors duration-300 break-all">
+                  cuadraschiguergue@gmail.com
                 </a>
               </div>
             </div>
@@ -74,15 +74,15 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-white/80">
-              © {currentYear} Cuadras Chiguergue. Todos los derechos reservados.
+            <p className="text-sm text-white/80 flex items-center gap-2">
+              © {currentYear} Cuadras Chiguergue. Todos los derechos reservados. Hecho con <Heart size={16} className="text-red-400 fill-current" />
             </p>
             <div className="flex gap-6 text-sm text-white/80">
               <button className="hover:text-white transition-colors duration-300">
                 Política de Privacidad
               </button>
               <button className="hover:text-white transition-colors duration-300">
-                Términos y Condiciones
+                Aviso Legal
               </button>
             </div>
           </div>

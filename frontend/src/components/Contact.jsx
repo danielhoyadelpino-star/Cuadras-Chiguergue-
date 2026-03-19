@@ -100,8 +100,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-600 mb-1">Teléfono Principal</p>
-                      <a href="tel:683532121" className="text-xl font-semibold text-[#4A7C59] hover:text-[#C19A6B] transition-colors duration-300">
-                        683 53 21 21
+                      <a href="tel:683532143" className="text-xl font-semibold text-[#4A7C59] hover:text-[#C19A6B] transition-colors duration-300">
+                        683 53 21 43
                       </a>
                       <p className="text-sm text-gray-600 mt-1">Clases y consultas generales</p>
                     </div>
@@ -128,8 +128,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-600 mb-1">Email</p>
-                      <a href="mailto:info@cuadraschiguergue.com" className="text-xl font-semibold text-[#4A7C59] hover:text-[#C19A6B] transition-colors duration-300 break-all">
-                        info@cuadraschiguergue.com
+                      <a href="mailto:cuadraschiguergue@gmail.com" className="text-xl font-semibold text-[#4A7C59] hover:text-[#C19A6B] transition-colors duration-300 break-all">
+                        cuadraschiguergue@gmail.com
                       </a>
                     </div>
                   </div>
@@ -155,8 +155,7 @@ const Contact = () => {
               <div className="bg-gradient-to-r from-[#4A7C59] to-[#6B9F7C] rounded-2xl p-8 text-white shadow-xl">
                 <h4 className="text-2xl font-bold mb-4">Horario de Atención</h4>
                 <p className="text-lg opacity-90">
-                  Lunes a Domingo<br />
-                  <span className="text-2xl font-semibold">9:00 - 20:00</span>
+                  {mockData.contact.schedule}
                 </p>
               </div>
             </div>

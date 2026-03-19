@@ -129,18 +129,29 @@ const Boarding = () => {
 
           {/* Contact CTA */}
           <div className="mt-16 text-center bg-gradient-to-r from-[#4A7C59] to-[#6B9F7C] rounded-2xl p-10 text-white shadow-2xl">
-            <h3 className="text-3xl font-bold mb-4">
-              ¿Necesitas Pensión para Tu Caballo?
-            </h3>
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Phone size={32} />
+              <h3 className="text-3xl font-bold">667 452 649</h3>
+            </div>
             <p className="text-xl mb-6 opacity-90">
-              Contacta con nosotros en el <strong>667 452 649</strong> para más información
+              ¿Necesitas Pensión para Tu Caballo?
             </p>
-            <a 
-              href="tel:667452649"
-              className="inline-block bg-white text-[#4A7C59] px-8 py-4 rounded-lg font-semibold hover:bg-[#F5E6D3] transition-all duration-300 hover:scale-105 shadow-lg"
-            >
-              Llamar Ahora
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:667452649"
+                className="inline-block bg-white text-[#4A7C59] px-8 py-4 rounded-lg font-semibold hover:bg-[#F5E6D3] transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                Llamar Ahora
+              </a>
+              <a 
+                href="https://wa.me/34667452649"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#25D366] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#128C7E] transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </div>

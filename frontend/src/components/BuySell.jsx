@@ -128,12 +128,15 @@ const BuySell = () => {
 
           {/* CTA */}
           <div className="bg-gradient-to-r from-[#4A7C59] to-[#6B9F7C] rounded-2xl p-10 text-center text-white shadow-2xl">
-            <h3 className="text-3xl font-bold mb-4">
+            <h3 className="text-3xl font-bold text-[#4A7C59] mb-4">
               ¿Interesado en Comprar o Vender un Caballo?
             </h3>
-            <p className="text-xl mb-6 opacity-90">
-              Contacta con nosotros en el <strong>667 452 649</strong>
-            </p>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <Phone size={28} />
+              <p className="text-xl text-white">
+                <strong>667 452 649</strong>
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:667452649"
