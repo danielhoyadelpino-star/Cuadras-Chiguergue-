@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { mockData } from '../data/mock';
-import { X } from 'lucide-react';
+import { X, Phone } from 'lucide-react';
 
 const Classes = () => {
   const { ref, inView } = useInView({
@@ -68,6 +68,35 @@ const Classes = () => {
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300"></div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Widget de Contacto */}
+          <div className="mt-16 bg-gradient-to-r from-[#4A7C59] to-[#6B9F7C] rounded-2xl p-10 text-center text-white shadow-2xl">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Phone size={32} />
+              <h3 className="text-4xl font-bold font-sans">
+                683 53 21 43
+              </h3>
+            </div>
+            <p className="text-xl mb-6 opacity-90">
+              ¿Quieres reservar una clase?
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:683532143"
+                className="inline-block bg-white text-[#4A7C59] px-8 py-4 rounded-lg font-semibold hover:bg-[#F5E6D3] transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                Llamar Ahora
+              </a>
+              <a 
+                href="https://wa.me/34683532143"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#25D366] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#128C7E] transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                WhatsApp
+              </a>
             </div>
           </div>
         </div>
