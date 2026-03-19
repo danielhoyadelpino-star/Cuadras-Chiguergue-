@@ -22,13 +22,13 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3 group cursor-pointer">
                 <Phone size={18} className="transition-transform duration-300 group-hover:scale-110" />
-                <a href="tel:683532143" className="text-sm hover:text-[#F5E6D3] transition-colors duration-300">
+                <a href="tel:683532143" className="text-sm hover:text-[#F5E6D3] transition-colors duration-300 font-sans">
                   683 53 21 43
                 </a>
               </div>
               <div className="flex items-center gap-3 group cursor-pointer">
                 <Phone size={18} className="transition-transform duration-300 group-hover:scale-110" />
-                <a href="tel:667452649" className="text-sm hover:text-[#F5E6D3] transition-colors duration-300">
+                <a href="tel:667452649" className="text-sm hover:text-[#F5E6D3] transition-colors duration-300 font-sans">
                   667 452 649
                 </a>
               </div>

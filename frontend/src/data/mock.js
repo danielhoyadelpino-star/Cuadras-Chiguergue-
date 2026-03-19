@@ -1,52 +1,32 @@
 // Mock data for Cuadras Chiguergue
 
 export const mockData = {
-  // Caballos principales con sus galerías individuales
+  // Caballos principales - SOLO UNA IMAGEN POR CABALLO
   horses: [
     {
       id: 1,
       name: "Wisky",
-      gallery: [
-        "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80",
-        "https://images.unsplash.com/photo-1551316679-9c6ae9dec224?w=800&q=80",
-        "https://images.unsplash.com/photo-1568572933382-74d440642117?w=800&q=80"
-      ]
+      image: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80"
     },
     {
       id: 2,
       name: "Fandango",
-      gallery: [
-        "https://images.unsplash.com/photo-1551336744-244ac2b7e1c7?w=800&q=80",
-        "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
-        "https://images.unsplash.com/photo-1616694547003-a6fd9df48b08?w=800&q=80"
-      ]
+      image: "https://images.unsplash.com/photo-1551336744-244ac2b7e1c7?w=800&q=80"
     },
     {
       id: 3,
       name: "Duende",
-      gallery: [
-        "https://images.unsplash.com/photo-1598632640487-6ea4a4e8b963?w=800&q=80",
-        "https://images.unsplash.com/photo-1588421357574-87938a86fa28?w=800&q=80",
-        "https://images.unsplash.com/photo-1580625616540-b30e8488205f?w=800&q=80"
-      ]
+      image: "https://images.unsplash.com/photo-1598632640487-6ea4a4e8b963?w=800&q=80"
     },
     {
       id: 4,
       name: "Caramelo",
-      gallery: [
-        "https://images.unsplash.com/photo-1616694547003-a6fd9df48b08?w=800&q=80",
-        "https://images.unsplash.com/photo-1589010588553-46e8e7c21788?w=800&q=80",
-        "https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=800&q=80"
-      ]
+      image: "https://images.unsplash.com/photo-1616694547003-a6fd9df48b08?w=800&q=80"
     },
     {
       id: 5,
       name: "Talavante",
-      gallery: [
-        "https://images.unsplash.com/photo-1588421357574-87938a86fa28?w=800&q=80",
-        "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80",
-        "https://images.unsplash.com/photo-1568572933382-74d440642117?w=800&q=80"
-      ]
+      image: "https://images.unsplash.com/photo-1588421357574-87938a86fa28?w=800&q=80"
     }
   ],
   

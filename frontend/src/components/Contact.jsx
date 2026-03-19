@@ -101,7 +101,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-600 mb-1">Teléfono Principal</p>
-                      <a href="tel:683532143" className="text-xl font-semibold text-[#4A7C59] hover:text-[#C19A6B] transition-colors duration-300">
+                      <a href="tel:683532143" className="text-xl font-semibold text-[#4A7C59] hover:text-[#C19A6B] transition-colors duration-300 font-sans">
                         683 53 21 43
                       </a>
                       <p className="text-sm text-gray-600 mt-1">Clases y consultas generales</p>
@@ -115,7 +115,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-600 mb-1">Teléfono Secundario</p>
-                      <a href="tel:667452649" className="text-xl font-semibold text-[#4A7C59] hover:text-[#C19A6B] transition-colors duration-300">
+                      <a href="tel:667452649" className="text-xl font-semibold text-[#4A7C59] hover:text-[#C19A6B] transition-colors duration-300 font-sans">
                         667 452 649
                       </a>
                       <p className="text-sm text-gray-600 mt-1">Pensión, transporte y compraventa</p>

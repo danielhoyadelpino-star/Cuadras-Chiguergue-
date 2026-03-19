@@ -89,8 +89,8 @@ const BuySell = () => {
             </h3>
             <div className="flex items-center justify-center gap-3 mb-6">
               <Phone size={28} />
-              <p className="text-xl">
-                <strong>667 452 649</strong>
+              <p className="text-3xl font-bold font-sans">
+                667 452 649
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

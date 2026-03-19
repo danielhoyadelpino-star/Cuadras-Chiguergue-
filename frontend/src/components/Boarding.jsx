@@ -131,7 +131,7 @@ const Boarding = () => {
           <div className="mt-16 text-center bg-gradient-to-r from-[#4A7C59] to-[#6B9F7C] rounded-2xl p-10 text-white shadow-2xl">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Phone size={32} />
-              <h3 className="text-3xl font-bold">667 452 649</h3>
+              <h3 className="text-4xl font-bold font-sans">667 452 649</h3>
             </div>
             <p className="text-xl mb-6 opacity-90">
               ¿Necesitas Pensión para Tu Caballo?
