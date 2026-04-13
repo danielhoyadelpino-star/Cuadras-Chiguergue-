@@ -11,7 +11,7 @@ export const mockData = {
     {
       id: 2,
       name: "Fandango",
-      image: "/images/fandango.jpg"
+      image: "/images/fandango.JPG"
     },
     {
       id: 3,
@@ -27,17 +27,17 @@ export const mockData = {
       id: 5,
       name: "Talavante",
       image: "/images/talavante.JPG"
-
     }
   ],
- // Galería general de otros caballos de la cuadra
+  
+  // Galería general de otros caballos de la cuadra
   generalHorsesGallery: [
     "/images/galeria1.JPG",
     "/images/galeria2.JPG",
     "/images/galeria3.JPG",
-    "/images/galeria4.jpg",
-    "/images/galeria5.jpg",
-    "/images/galeria6.jpg",
+    "/images/galeria4.JPG",
+    "/images/galería5.JPG",
+    "/images/galería6.JPG"
   ],
 
   // Exactamente 2 excursiones con sus galerías
@@ -48,16 +48,16 @@ export const mockData = {
       gallery: [
         "/images/bosque1.JPG",
         "/images/bosque2.JPG",
-        "/images/bosque3.JPG",
+        "/images/bosque3.JPG"
       ]
     },
     {
       id: 2,
       title: "Ruta costera",
       gallery: [
-        "/images/costa1.JPG",
-        "/images/costa2.JPG",
-        "/images/costa3.jpg",
+        "/images/Costa1.JPG",
+        "/images/Costa2.JPG",
+        "/images/Costa3.jpg"
       ]
     }
   ],
