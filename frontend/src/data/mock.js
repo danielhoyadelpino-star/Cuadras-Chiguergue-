@@ -36,8 +36,8 @@ export const mockData = {
     "/images/galeria2.JPG",
     "/images/galeria3.JPG",
     "/images/galeria4.JPG",
-    "/images/galería5.JPG",
-    "/images/galería6.JPG"
+    "/images/galeria5.JPG",
+    "/images/galeria6.JPG"
   ],
 
   // Exactamente 2 excursiones con sus galerías
