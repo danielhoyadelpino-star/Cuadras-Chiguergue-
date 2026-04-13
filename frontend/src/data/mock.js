@@ -6,38 +6,38 @@ export const mockData = {
     {
       id: 1,
       name: "Wisky",
-      image: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80"
+      image: "/images/wisky.JPG"
     },
     {
       id: 2,
       name: "Fandango",
-      image: "https://images.unsplash.com/photo-1551336744-244ac2b7e1c7?w=800&q=80"
+      image: "/images/fandango.jpg"
     },
     {
       id: 3,
       name: "Duende",
-      image: "https://images.unsplash.com/photo-1598632640487-6ea4a4e8b963?w=800&q=80"
+      image: "/images/duende.jpg"
     },
     {
       id: 4,
       name: "Caramelo",
-      image: "https://images.unsplash.com/photo-1616694547003-a6fd9df48b08?w=800&q=80"
+      image: "/images/caramelo.JPG"
     },
     {
       id: 5,
       name: "Talavante",
-      image: "https://images.unsplash.com/photo-1588421357574-87938a86fa28?w=800&q=80"
+      image: "/images/talavante.JPG"
+
     }
   ],
-  
-  // Galería general de otros caballos de la cuadra
+ // Galería general de otros caballos de la cuadra
   generalHorsesGallery: [
-    "https://images.unsplash.com/photo-1589010588553-46e8e7c21788?w=600&q=80",
-    "https://images.unsplash.com/photo-1568572933382-74d440642117?w=600&q=80",
-    "https://images.unsplash.com/photo-1580625616540-b30e8488205f?w=600&q=80",
-    "https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600&q=80",
-    "https://images.unsplash.com/photo-1551336744-244ac2b7e1c7?w=600&q=80",
-    "https://images.unsplash.com/photo-1598632640487-6ea4a4e8b963?w=600&q=80"
+    "/images/galeria1.JPG",
+    "/images/galeria2.JPG",
+    "/images/galeria3.JPG",
+    "/images/galeria4.jpg",
+    "/images/galeria5.jpg",
+    "/images/galeria6.jpg",
   ],
 
   // Exactamente 2 excursiones con sus galerías
@@ -46,18 +46,18 @@ export const mockData = {
       id: 1,
       title: "Excursión por el bosque",
       gallery: [
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-        "https://images.unsplash.com/photo-1554179069-e7f6208f0cb5?w=800&q=80",
-        "https://images.unsplash.com/photo-1568572933382-74d440642117?w=800&q=80"
+        "/images/bosque1.JPG",
+        "/images/bosque2.JPG",
+        "/images/bosque3.JPG",
       ]
     },
     {
       id: 2,
       title: "Ruta costera",
       gallery: [
-        "https://images.unsplash.com/photo-1606654049427-f1e3e1d0a749?w=800&q=80",
-        "https://images.unsplash.com/photo-1551316679-9c6ae9dec224?w=800&q=80",
-        "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80"
+        "/images/costa1.JPG",
+        "/images/costa2.JPG",
+        "/images/costa3.jpg",
       ]
     }
   ],
