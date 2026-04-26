@@ -118,8 +118,8 @@ export const mockData = {
     tracks: "2 pistas",
     boxes: "+20 boxes",
     images: {
-      track: "https://images.unsplash.com/photo-1551316679-9c6ae9dec224?w=800&q=80",
-      panoramic: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+      track: "/images/pista1.JPG",
+      panoramic: "/images/vistapano.JPG"
     }
   },
 
