@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import axios from 'axios';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react';
 import { toast } from 'sonner';
 import { mockData } from '../data/mock';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 const Contact = () => {
   const { ref, inView } = useInView({
@@ -35,21 +38,15 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Enviar datos al backend
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
+      // Enviar datos al backend MongoDB
+      const response = await axios.post(`${BACKEND_URL}/api/contact`, {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message
       });
 
-      if (!response.ok) {
-        throw new Error('Error al guardar el mensaje');
-      }
-
-      const data = await response.json();
-      console.log('Mensaje guardado:', data);
+      console.log('Mensaje guardado:', response.data);
 
       setSubmitted(true);
       toast.success('¡Mensaje enviado con éxito! Te contactaremos pronto.');
@@ -126,8 +123,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-600 mb-1">Email</p>
-                      <a href="mailto:cuadraschiguergue@gmail.com" className="text-xl font-semibold text-[#4A7C59] hover:text-[#C19A6B] transition-colors duration-300 break-all">
-                        cuadraschiguergue@gmail.com
+                      <a href="mailto:centrohipicochiguergue@gmail.com" className="text-xl font-semibold text-[#4A7C59] hover:text-[#C19A6B] transition-colors duration-300 break-all">
+                        centrohipicochiguergue@gmail.com
                       </a>
                     </div>
                   </div>

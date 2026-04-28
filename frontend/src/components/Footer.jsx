@@ -34,8 +34,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 group cursor-pointer">
                 <Mail size={18} className="transition-transform duration-300 group-hover:scale-110" />
-                <a href="mailto:cuadraschiguergue@gmail.com" className="text-sm hover:text-[#F5E6D3] transition-colors duration-300 break-all">
-                  cuadraschiguergue@gmail.com
+                <a href="mailto:centrohipicochiguergue@gmail.com" className="text-sm hover:text-[#F5E6D3] transition-colors duration-300 break-all">
+                  centrohipicochiguergue@gmail.com
                 </a>
               </div>
             </div>

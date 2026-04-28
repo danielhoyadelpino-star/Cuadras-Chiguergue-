@@ -128,7 +128,7 @@ export const mockData = {
     secondaryPhone: "667 452 649",
     address: "Diseminado Chiguergue 12, Santa Cruz de Tenerife, España",
     instagram: "@centro.hipico.chiguergue",
-    email: "cuadraschiguergue@gmail.com",
+    email: "centrohipicochiguergue@gmail.com",
     schedule: "Lunes a viernes: 9:00 – 20:00"
   }
 };
