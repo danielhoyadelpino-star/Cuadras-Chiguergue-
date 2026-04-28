@@ -36,13 +36,12 @@ const Contact = () => {
     try {
       console.log('Enviando formulario vía EmailJS...');
 
-      // Crear parámetros del template incluyendo to_email
+      // Crear parámetros del template (sin to_email si ya está configurado en el template)
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
         phone: formData.phone,
-        message: formData.message,
-        to_email: 'centrohipicochiguergue@gmail.com'
+        message: formData.message
       };
 
       console.log('Parámetros:', templateParams);
