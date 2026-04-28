@@ -37,18 +37,15 @@ const Contact = () => {
       // Crear el objeto de parámetros para EmailJS
       const templateParams = {
         from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone,
-        message: formData.message,
-        to_email: 'centrohipicochiguergue@gmail.com'
+        reply_to: formData.email,
+        message: formData.message
       };
 
       // Enviar email con EmailJS
       const result = await emailjs.send(
         'service_sb0k0eo',    // Service ID
         'template_o3gb72n',   // Template ID
-        templateParams,        // Template parameters
-        'O7sglCf8-2XP0XOWK'   // Public Key
+        templateParams        // Template parameters
       );
 
       console.log('Email enviado exitosamente:', result);
