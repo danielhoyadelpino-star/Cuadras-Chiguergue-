@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import emailjs from '@emailjs/browser';
 import { Button } from './ui/button';
@@ -14,6 +14,11 @@ const Contact = () => {
     threshold: 0.2
   });
 
+  // Inicializar EmailJS con la Public Key
+  useEffect(() => {
+    emailjs.init('O7sglCf8-2XP0XOWK');
+  }, []);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,37 +29,34 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
+      // Crear el objeto de parámetros para EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        to_email: 'centrohipicochiguergue@gmail.com'
+      };
+
       // Enviar email con EmailJS
-      await emailjs.send(
-        'service_sb0k0eo',
-        'template_o3gb72n',
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-          to_email: 'centrohipicochiguergue@gmail.com'
-        },
-        'O7sglCf8-2XP0XOWK'
+      const result = await emailjs.send(
+        'service_sb0k0eo',    // Service ID
+        'template_o3gb72n',   // Template ID
+        templateParams,        // Template parameters
+        'O7sglCf8-2XP0XOWK'   // Public Key
       );
 
+      console.log('Email enviado exitosamente:', result);
       setSubmitted(true);
       toast.success('¡Mensaje enviado con éxito! Te contactaremos pronto.');
       setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (error) {
-      console.error('Error al enviar email:', error);
+      console.error('Error al enviar:', error);
       toast.error('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo o llámanos directamente.');
     } finally {
       setIsSubmitting(false);
@@ -184,32 +186,32 @@ const Contact = () => {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="from_name" className="block text-sm font-medium text-gray-700 mb-2">
                       Nombre *
                     </label>
                     <Input
-                      id="name"
-                      name="name"
+                      id="from_name"
+                      name="from_name"
                       type="text"
                       required
                       value={formData.name}
-                      onChange={handleChange}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
                       className="w-full"
                       placeholder="Tu nombre completo"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="from_email" className="block text-sm font-medium text-gray-700 mb-2">
                       Correo Electrónico *
                     </label>
                     <Input
-                      id="email"
-                      name="email"
+                      id="from_email"
+                      name="from_email"
                       type="email"
                       required
                       value={formData.email}
-                      onChange={handleChange}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
                       className="w-full"
                       placeholder="tu@email.com"
                     />
@@ -225,7 +227,7 @@ const Contact = () => {
                       type="tel"
                       required
                       value={formData.phone}
-                      onChange={handleChange}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
                       className="w-full"
                       placeholder="+34 123 456 789"
                     />
@@ -240,7 +242,7 @@ const Contact = () => {
                       name="message"
                       required
                       value={formData.message}
-                      onChange={handleChange}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
                       rows={5}
                       className="w-full resize-none"
                       placeholder="Cuéntanos en qué podemos ayudarte..."
