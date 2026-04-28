@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import emailjs from '@emailjs/browser';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
@@ -36,30 +35,28 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // EmailJS configuration - user needs to set these up
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
-
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-          to_email: 'info@cuadraschiguergue.com'
+      // Enviar datos al backend
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        publicKey
-      );
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        throw new Error('Error al guardar el mensaje');
+      }
+
+      const data = await response.json();
+      console.log('Mensaje guardado:', data);
 
       setSubmitted(true);
       toast.success('¡Mensaje enviado con éxito! Te contactaremos pronto.');
       setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (error) {
-      console.error('Error sending email:', error);
-      toast.error('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo o llámanos directamente.');
+      console.error('Error sending message:', error);
+      toast.error('Hubo un error al guardar tus datos. Por favor, inténtelo de nuevo o contáctanos directamente.');
     } finally {
       setIsSubmitting(false);
     }

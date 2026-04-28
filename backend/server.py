@@ -28,7 +28,7 @@ api_router = APIRouter(prefix="/api")
 
 # Define Models
 class StatusCheck(BaseModel):
-    model_config = ConfigDict(extra="ignore")  # Ignore MongoDB's _id field
+    model_config = ConfigDict(extra="ignore")
     
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     client_name: str
@@ -36,6 +36,22 @@ class StatusCheck(BaseModel):
 
 class StatusCheckCreate(BaseModel):
     client_name: str
+
+class ContactMessage(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    name: str
+    email: str
+    phone: str
+    message: str
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+class ContactMessageCreate(BaseModel):
+    name: str
+    email: str
+    phone: str
+    message: str
 
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
@@ -65,6 +81,31 @@ async def get_status_checks():
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
     
     return status_checks
+
+# Nueva ruta para guardar mensajes de contacto
+@api_router.post("/contact", response_model=ContactMessage)
+async def create_contact_message(input: ContactMessageCreate):
+    contact_dict = input.model_dump()
+    contact_obj = ContactMessage(**contact_dict)
+    
+    # Convert to dict and serialize datetime to ISO string for MongoDB
+    doc = contact_obj.model_dump()
+    doc['created_at'] = doc['created_at'].isoformat()
+    
+    result = await db.contacts.insert_one(doc)
+    return contact_obj
+
+@api_router.get("/contact", response_model=List[ContactMessage])
+async def get_contact_messages():
+    # Exclude MongoDB's _id field from the query results
+    contacts = await db.contacts.find({}, {"_id": 0}).to_list(1000)
+    
+    # Convert ISO string timestamps back to datetime objects
+    for contact in contacts:
+        if isinstance(contact['created_at'], str):
+            contact['created_at'] = datetime.fromisoformat(contact['created_at'])
+    
+    return contacts
 
 # Include the router in the main app
 app.include_router(api_router)
