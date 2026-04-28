@@ -36,10 +36,10 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Configuración EmailJS - Reemplaza estos valores con los tuyos
+      // Enviar email con EmailJS
       await emailjs.send(
-        'YOUR_SERVICE_ID',        // Lo obtienes de EmailJS
-        'YOUR_TEMPLATE_ID',       // Lo obtienes de EmailJS
+        'service_sb0k0eo',
+        'template_o3gb72n',
         {
           from_name: formData.name,
           from_email: formData.email,
@@ -47,7 +47,7 @@ const Contact = () => {
           message: formData.message,
           to_email: 'centrohipicochiguergue@gmail.com'
         },
-        'YOUR_PUBLIC_KEY'          // Lo obtienes de EmailJS
+        'O7sglCf8-2XP0XOWK'
       );
 
       setSubmitted(true);
