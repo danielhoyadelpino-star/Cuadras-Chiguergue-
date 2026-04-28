@@ -48,9 +48,9 @@ const Contact = () => {
 
       // Enviar email con método send()
       const result = await emailjs.send(
-        'service_sb0k0eo',    // Service ID
-        'o3gb72n',            // Template ID
-        templateParams        // Template parameters
+        'service_sb0k0eo',     // Service ID
+        'template_mnlrwwh',    // Template ID CORRECTO
+        templateParams         // Template parameters
       );
 
       console.log('Email enviado exitosamente:', result);
