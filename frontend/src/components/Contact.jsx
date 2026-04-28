@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import axios from 'axios';
+import emailjs from '@emailjs/browser';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react';
 import { toast } from 'sonner';
 import { mockData } from '../data/mock';
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 const Contact = () => {
   const { ref, inView } = useInView({
@@ -38,22 +36,26 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Enviar datos al backend MongoDB
-      const response = await axios.post(`${BACKEND_URL}/api/contact`, {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        message: formData.message
-      });
-
-      console.log('Mensaje guardado:', response.data);
+      // Configuración EmailJS - Reemplaza estos valores con los tuyos
+      await emailjs.send(
+        'YOUR_SERVICE_ID',        // Lo obtienes de EmailJS
+        'YOUR_TEMPLATE_ID',       // Lo obtienes de EmailJS
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          to_email: 'centrohipicochiguergue@gmail.com'
+        },
+        'YOUR_PUBLIC_KEY'          // Lo obtienes de EmailJS
+      );
 
       setSubmitted(true);
       toast.success('¡Mensaje enviado con éxito! Te contactaremos pronto.');
       setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (error) {
-      console.error('Error sending message:', error);
-      toast.error('Hubo un error al guardar tus datos. Por favor, inténtelo de nuevo o contáctanos directamente.');
+      console.error('Error al enviar email:', error);
+      toast.error('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo o llámanos directamente.');
     } finally {
       setIsSubmitting(false);
     }
