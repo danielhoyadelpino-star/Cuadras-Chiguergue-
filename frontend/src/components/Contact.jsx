@@ -34,23 +34,13 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Crear el objeto de parámetros para EmailJS
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone,
-        message: formData.message
-      };
+      console.log('Enviando formulario vía EmailJS...');
 
-      console.log('Enviando con parámetros:', templateParams);
-      console.log('Service ID:', 'service_sb0k0eo');
-      console.log('Template ID:', 'template_o3gb72n');
-
-      // Enviar email con EmailJS
-      const result = await emailjs.send(
+      // Enviar email usando sendForm (más confiable)
+      const result = await emailjs.sendForm(
         'service_sb0k0eo',    // Service ID
-        'template_o3gb72n',   // Template ID
-        templateParams        // Template parameters
+        'o3gb72n',            // Template ID
+        e.target              // Elemento del formulario
       );
 
       console.log('Email enviado exitosamente:', result);
