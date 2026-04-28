@@ -37,9 +37,14 @@ const Contact = () => {
       // Crear el objeto de parámetros para EmailJS
       const templateParams = {
         from_name: formData.name,
-        reply_to: formData.email,
+        from_email: formData.email,
+        phone: formData.phone,
         message: formData.message
       };
+
+      console.log('Enviando con parámetros:', templateParams);
+      console.log('Service ID:', 'service_sb0k0eo');
+      console.log('Template ID:', 'template_o3gb72n');
 
       // Enviar email con EmailJS
       const result = await emailjs.send(
@@ -54,6 +59,8 @@ const Contact = () => {
       setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (error) {
       console.error('Error al enviar:', error);
+      console.error('Error status:', error.status);
+      console.error('Error text:', error.text);
       toast.error('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo o llámanos directamente.');
     } finally {
       setIsSubmitting(false);
