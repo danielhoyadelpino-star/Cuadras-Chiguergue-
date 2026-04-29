@@ -80,18 +80,32 @@ export const mockData = {
     { id: 4, image: "/images/clases2.JPG", category: "clases" },
     { id: 5, image: "/images/clases3.JPG", category: "clases" },
     
-    // Pensión/Caballos
+    // Caballos - Fotos generales
     { id: 6, image: "/images/pension.JPG", category: "caballos" },
     { id: 7, image: "/images/sobrenosotros.png", category: "caballos" },
+    { id: 8, image: "/images/portada.jpeg", category: "caballos" },
+    { id: 9, image: "/images/caballo_establo.JPG", category: "caballos" },
+    
+    // Caballos - Individuales
+    { id: 10, image: "/images/wisky.JPG", category: "caballos" },
+    { id: 11, image: "/images/fandango.JPG", category: "caballos" },
+    { id: 12, image: "/images/duende.jpg", category: "caballos" },
+    { id: 13, image: "/images/caramelo.JPG", category: "caballos" },
+    { id: 14, image: "/images/talavante.JPG", category: "caballos" },
+    
+    // Caballos - Galería general
+    { id: 15, image: "/images/galeria1.JPG", category: "caballos" },
+    { id: 16, image: "/images/galeria2.JPG", category: "caballos" },
+    { id: 17, image: "/images/galeria3.JPG", category: "caballos" },
+    { id: 18, image: "/images/galeria4.JPG", category: "caballos" },
+    { id: 19, image: "/images/galeria5.JPG", category: "caballos" },
+    { id: 20, image: "/images/galeria6.JPG", category: "caballos" },
     
     // Transporte
-    { id: 8, image: "/images/camion6.JPG", category: "transporte" },
-    { id: 9, image: "/images/camion4.jpeg", category: "transporte" },
-    { id: 10, image: "/images/remolque4.JPG", category: "transporte" },
-    { id: 11, image: "/images/remolque2.JPG", category: "transporte" },
-    
-    // Hero/General
-    { id: 12, image: "/images/portada.jpeg", category: "caballos" }
+    { id: 21, image: "/images/camion6.JPG", category: "transporte" },
+    { id: 22, image: "/images/camion4.jpeg", category: "transporte" },
+    { id: 23, image: "/images/remolque4.JPG", category: "transporte" },
+    { id: 24, image: "/images/remolque2.JPG", category: "transporte" }
   ],
 
   // Tipos de clases (simplificado)

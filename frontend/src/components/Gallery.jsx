@@ -10,13 +10,11 @@ const Gallery = () => {
   });
 
   const [selectedImage, setSelectedImage] = useState(null);
-  const [filter, setFilter] = useState('todos');
+  const [filter, setFilter] = useState('caballos');
 
-  const categories = ['todos', 'caballos', 'instalaciones', 'clases', 'transporte'];
+  const categories = ['caballos', 'instalaciones', 'clases', 'transporte'];
 
-  const filteredGallery = filter === 'todos' 
-    ? mockData.gallery 
-    : mockData.gallery.filter(item => item.category === filter);
+  const filteredGallery = mockData.gallery.filter(item => item.category === filter);
 
   return (
     <section id="gallery" className="py-24 md:py-32 bg-gradient-to-b from-[#F5E6D3]/20 to-white">
