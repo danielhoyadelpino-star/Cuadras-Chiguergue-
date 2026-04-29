@@ -11,7 +11,8 @@ import { mockData } from '../data/mock';
 const Contact = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2
+    threshold: 0,
+    rootMargin: '0px 0px -100px 0px'
   });
 
   // Inicializar EmailJS con la Public Key

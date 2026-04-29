@@ -6,7 +6,8 @@ import { X } from 'lucide-react';
 const Horses = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0,
+    rootMargin: '0px 0px -100px 0px'
   });
 
   const [lightboxImage, setLightboxImage] = useState(null);

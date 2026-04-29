@@ -6,7 +6,8 @@ import { Phone, Shield, FileCheck, Truck, Clock, CheckCircle } from 'lucide-reac
 const Transport = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2
+    threshold: 0,
+    rootMargin: '0px 0px -100px 0px'
   });
 
   const services = [

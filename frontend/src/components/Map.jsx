@@ -4,7 +4,8 @@ import { useInView } from 'react-intersection-observer';
 const Map = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2
+    threshold: 0,
+    rootMargin: '0px 0px -100px 0px'
   });
 
   // Google Maps embed URL for Diseminado Chiguergue 12, Santa Cruz de Tenerife

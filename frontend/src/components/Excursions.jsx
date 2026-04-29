@@ -6,7 +6,8 @@ import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 const Excursions = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2
+    threshold: 0,
+    rootMargin: '0px 0px -100px 0px'
   });
 
   const [selectedGallery, setSelectedGallery] = useState({});
