@@ -12,7 +12,7 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [filter, setFilter] = useState('todos');
 
-  const categories = ['todos', 'caballos', 'instalaciones', 'clases'];
+  const categories = ['todos', 'caballos', 'instalaciones', 'clases', 'transporte'];
 
   const filteredGallery = filter === 'todos' 
     ? mockData.gallery 

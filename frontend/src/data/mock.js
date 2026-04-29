@@ -71,12 +71,27 @@ export const mockData = {
 
   // Galería general (NO incluye excursiones)
   gallery: [
-    { id: 1, image: "https://images.unsplash.com/photo-1551316679-9c6ae9dec224?w=800&q=80", category: "instalaciones" },
-    { id: 2, image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80", category: "caballos" },
-    { id: 3, image: "https://images.unsplash.com/photo-1568572933382-74d440642117?w=800&q=80", category: "clases" },
-    { id: 4, image: "https://images.unsplash.com/photo-1588421357574-87938a86fa28?w=800&q=80", category: "caballos" },
-    { id: 5, image: "https://images.unsplash.com/photo-1616694547003-a6fd9df48b08?w=800&q=80", category: "instalaciones" },
-    { id: 6, image: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80", category: "caballos" }
+    // Instalaciones
+    { id: 1, image: "/images/vistapano.JPG", category: "instalaciones" },
+    { id: 2, image: "/images/pista1.JPG", category: "instalaciones" },
+    
+    // Clases
+    { id: 3, image: "/images/clases1.JPG", category: "clases" },
+    { id: 4, image: "/images/clases2.JPG", category: "clases" },
+    { id: 5, image: "/images/clases3.JPG", category: "clases" },
+    
+    // Pensión/Caballos
+    { id: 6, image: "/images/pension.JPG", category: "caballos" },
+    { id: 7, image: "/images/sobrenosotros.png", category: "caballos" },
+    
+    // Transporte
+    { id: 8, image: "/images/camion6.JPG", category: "transporte" },
+    { id: 9, image: "/images/camion4.jpeg", category: "transporte" },
+    { id: 10, image: "/images/remolque4.JPG", category: "transporte" },
+    { id: 11, image: "/images/remolque2.JPG", category: "transporte" },
+    
+    // Hero/General
+    { id: 12, image: "/images/portada.jpeg", category: "caballos" }
   ],
 
   // Tipos de clases (simplificado)
