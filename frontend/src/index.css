@@ -88,6 +88,13 @@ code {
     }
 }
 
+/* Compactar contenido en móvil sin tocar el desktop */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
 @layer base {
     [data-debug-wrapper="true"] {
         display: contents !important;
