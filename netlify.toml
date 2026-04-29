@@ -1,0 +1,11 @@
+# Configuración de Netlify para Cuadras Chiguergue
+[build]
+  base = "frontend"
+  command = "yarn build"
+  publish = "build"
+
+# Redirigir todas las rutas al index.html para React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
