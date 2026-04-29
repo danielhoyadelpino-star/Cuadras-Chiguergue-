@@ -58,7 +58,7 @@ const About = () => {
             <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-r from-[#4A7C59] to-[#C19A6B] rounded-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500 blur-xl"></div>
               <img
-                src="https://images.unsplash.com/photo-1568572933382-74d440642117?w=800&q=80"
+                src="/images/sobrenosotros.png"
                 alt="Cuadras Chiguergue"
                 className="relative rounded-2xl shadow-2xl w-full h-[400px] object-cover transform transition-transform duration-500 group-hover:scale-[1.02]"
               />
