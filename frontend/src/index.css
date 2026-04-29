@@ -95,16 +95,6 @@ code {
     }
 }
 
-/* Ocultar badges externos (Made with Emergent) */
-[class*="emergent"],
-[id*="emergent"],
-[class*="made-with"],
-[class*="badge"],
-[class*="branding"],
-[class*="watermark"] {
-    display: none !important;
-}
-
 @layer base {
     [data-debug-wrapper="true"] {
         display: contents !important;
