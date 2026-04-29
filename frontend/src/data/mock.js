@@ -105,10 +105,10 @@ export const mockData = {
 
   // Vehículos de transporte
   transportVehicles: [
-    { id: 1, name: "Camión de 6 caballos", image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80" },
-    { id: 2, name: "Camión de 4 caballos", image: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&q=80" },
-    { id: 3, name: "Remolque de 4 caballos", image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80" },
-    { id: 4, name: "Remolque de 2 caballos", image: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&q=80" }
+    { id: 1, name: "Camión de 6 caballos", image: "/images/camion6.JPG" },
+    { id: 2, name: "Camión de 4 caballos", image: "/images/camion4.jpeg" },
+    { id: 3, name: "Remolque de 4 caballos", image: "/images/remolque4.JPG" },
+    { id: 4, name: "Remolque de 2 caballos", image: "/images/remolque2.JPG" }
   ],
 
   facilities: {
