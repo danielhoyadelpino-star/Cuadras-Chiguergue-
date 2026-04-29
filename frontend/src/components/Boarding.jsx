@@ -58,7 +58,7 @@ const Boarding = () => {
             <div className="relative group order-2 md:order-1">
               <div className="absolute -inset-4 bg-gradient-to-r from-[#4A7C59] to-[#C19A6B] rounded-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500 blur-xl"></div>
               <img
-                src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80"
+                src="/images/pension.JPG"
                 alt="Pensión de Caballos"
                 className="relative rounded-2xl shadow-2xl w-full h-[450px] object-cover transform transition-transform duration-500 group-hover:scale-[1.02]"
               />

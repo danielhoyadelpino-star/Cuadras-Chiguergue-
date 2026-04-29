@@ -64,12 +64,9 @@ export const mockData = {
 
   // Galería de clases
   classesGallery: [
-    "https://images.unsplash.com/photo-1568572933382-74d440642117?w=800&q=80",
-    "https://images.unsplash.com/photo-1551316679-9c6ae9dec224?w=800&q=80",
-    "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
-    "https://images.unsplash.com/photo-1606654049427-f1e3e1d0a749?w=800&q=80",
-    "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80",
-    "https://images.unsplash.com/photo-1588421357574-87938a86fa28?w=800&q=80"
+    "/images/clases1.JPG",
+    "/images/clases2.JPG",
+    "/images/clases3.JPG"
   ],
 
   // Galería general (NO incluye excursiones)
