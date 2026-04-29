@@ -84,7 +84,7 @@ export const mockData = {
     
     // Caballos - Fotos generales
     { id: 8, image: "/images/pension.JPG", category: "caballos" },
-    { id: 9, image: "/images/sobrenosotros.png", category: "caballos" },
+    { id: 9, image: "/images/sobrenosotros.jpg", category: "caballos" },
     { id: 10, image: "/images/portada.jpeg", category: "caballos" },
     { id: 11, image: "/images/caballo_establo.JPG", category: "caballos" },
     
